@@ -15,19 +15,29 @@ function App (){
       <div className="navbar">
         <Navbar />
       </div>
-      <div className="main">
+      <div className="main" theme="dark">
         <Layout>
-            <Routes>
-              <Route path="/" element={<Homepage />} />
-              <Route path="/exchanges" element={<Exchange />} />
-              <Route path="/cryptocurrencies" element={<CryptoCurrencies />} />
-              <Route path="/crypto/:coinId" element={<CryptoDetails />} />
-              <Route path="/news" element={<News />} />
-            </Routes>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/exchanges" element={<Exchange />} />
+            <Route path="/cryptocurrencies" element={<CryptoCurrencies />} />
+            <Route path="/crypto/:coinId" element={<CryptoDetails />} />
+            <Route path="/news" element={<News />} />
+          </Routes>
         </Layout>
-      </div>
 
-      <div className="footer"></div>
+        <div className="footer">
+          <Typography.Title level={5} style={{color: "black"}}>
+            Cryptoverse <br />
+            All rights reserved
+          </Typography.Title>
+          <Space>
+            <Link to="/">Home</Link>
+            <Link to="/">Home</Link>
+            <Link to="/">Home</Link>
+          </Space>
+        </div>
+      </div>
     </div>
   );
 }
